@@ -1,29 +1,30 @@
 import httpclient
-import cgi
+import json
 import strutils
-import xmlparser
-import xmltree
-import streams
+
+proc toCelsius(f : float) : float =
+  return (f - 32.0) * 5.0/9.0 
+
+proc getForecast*(place : string) : string =
+  let query = "select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text=\"" & place & "\")"
+  var baseurl = "https://query.yahooapis.com/v1/public/yql?&" 
+  let yqlurl = baseurl & "q=" &  query & "&format=json"
+  return getContent(yqlurl)
+
+proc getForecast(json : JsonNode) =
+    if json.kind == JObject:
+      var days = json["query"]["results"]["channel"]["item"]["forecast"]
+      for day in items(days):
+        echo($day)
+        echo("\n")
+        var h = day["high"].str
+        echo(h)
+        var f = parseFloat(h)
+        var c = toCelsius(f)
+        echo($c)
 
 
-# Create the return types.
-type YWeather* = tuple[sunrise : string, sunset : string, humidity : string, pressure : string, rising : string,
-visibility : string, code : string, date : string, temp : string, condition : string, title : string,
-latitude : string, longitude : string, htmlDescription : string, link : string, city : string,
-country : string, region : string, windChill : string, windDirection : string, windSpeed : string,
-distanceUnits : string, pressureUnits : string, speedUnits : string, tempUnits : string]
-
-
-
-
-# Build the URL.
-var baseurl = "https://query.yahooapis.com/v1/public/yql?"
-var yqlquery = "select%20wind%20from%20weather.forecast%20where%20woeid=2460286"
-let yqlurl = baseurl & "q=" &  yqlquery & "&format=json"
-#& "&format=json"
-
-# Get the data
-#echo(getContent("www.nim-lang.org"))
-let s1 = "http://en.wikipedia.org/w/index.php?title=Special%3ASearch&profile=default&search=test&fulltext=Search"
-echo getContent(yqlurl)
-#"https://query.yahooapis.com/v1/public/yql?q=select%20wind%20from%20weather.forecast%20where%20woeid=2460286"
+let s1 = "malmoe"
+var res = parseJson(getForecast(s1))
+getForecast(res)
+#echo(res)
