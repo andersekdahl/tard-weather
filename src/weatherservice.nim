@@ -14,17 +14,19 @@ proc getForecast*(place : string) : string =
 proc getForecast(json : JsonNode) =
     if json.kind == JObject:
       var days = json["query"]["results"]["channel"]["item"]["forecast"]
+      var obj = newJObject()
+      echo(days)
+      
       for day in items(days):
-        echo($day)
-        echo("\n")
-        var h = day["high"].str
-        echo(h)
-        var f = parseFloat(h)
-        var c = toCelsius(f)
-        echo($c)
+        obj["high"] = % toCelsius(parseFloat(day["high"].str))
+        obj["low"] = % toCelsius(parseFloat(day["low"].str))
+      echo($obj)
 
 
 let s1 = "malmoe"
 var res = parseJson(getForecast(s1))
 getForecast(res)
 #echo(res)
+
+
+
