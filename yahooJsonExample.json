@@ -1,0 +1,58 @@
+forecast
+[ { "code": "14",  "date": "20 Jan 2015",  "day": "Tue",  "high": "35",  "low": "31",  "text": "Snow Showers" },
+  { "code": "26",  "date": "21 Jan 2015",  "day": "Wed",  "high": "36",  "low": "28",  "text": "Cloudy" },
+  { "code": "28",  "date": "22 Jan 2015",  "day": "Thu",  "high": "34",  "low": "29",  "text": "Mostly Cloudy" },
+  { "code": "30",  "date": "23 Jan 2015",  "day": "Fri",  "high": "34",  "low": "30",  "text": "Partly Cloudy" },
+  { "code": "28",  "date": "24 Jan 2015",  "day": "Sat",  "high": "34",  "low": "32",  "text": "Mostly Cloudy" }]
+{ "high": 1.111111111111111,  "low": 0.0}
+
+
+
+{ "title": "Yahoo! Weather - Malmo, SE",
+  "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Malmo__SE/*http://weather.yahoo.com/forecast/SWXX0020_f.html",
+  "description": "Yahoo! Weather for Malmo, SE",
+  "language": "en-us",
+  "lastBuildDate": "Tue, 20 Jan 2015 6:49 pm CET",
+  "ttl": "60",
+  "location":  { "city": "Malmo",
+		 "country": "Sweden",
+		 "region": "" },
+  "units":  { "distance": "mi",
+	      "pressure": "in",
+	      "speed": "mph",
+	      "temperature": "F" }
+  ,  "wind":  { "chill": "29",
+		"direction": "90"
+		,  "speed": "8" },
+  "atmosphere":  { "humidity": "93",
+		   "pressure": "29.88",
+		   "rising": "0",
+		   "visibility": "4.97" },
+  "astronomy":  { "sunrise": "8:22 am",
+		  "sunset": "4:17 pm" },
+  "image":  { "title": "Yahoo! Weather",
+	      "width": "142",
+	      "height": "18",
+	      "link": "http://weather.yahoo.com",
+	      "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif" },
+  "item":  { "title": "Conditions for Malmo, SE at 6:49 pm CET",
+	     "lat": "55.59",
+	     "long": "13.02",
+	     "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Malmo__SE/*http://weather.yahoo.com/forecast/SWXX0020_f.html",
+	     "pubDate": "Tue, 20 Jan 2015 6:49 pm CET",
+	     "condition":  { "code": "11",
+			     "date": "Tue, 20 Jan 2015 6:49 pm CET",
+			     "temp": "36",
+			     "text": "Light Rain" },
+	     "description": "\u000A<img src=\"http://l.yimg.com/a/i/us/we/52/11.gif\"/><br />\u000A<b>Current Conditions:</b><br />\u000ALight Rain, 36 F<BR />\u000A<BR /><b>Forecast:</b><BR />\u000ATue - Snow Showers. High: 35 Low: 31<br />\u000AWed - Cloudy. High: 36 Low: 28<br />\u000AThu - Mostly Cloudy. High: 34 Low: 29<br />\u000AFri - Partly Cloudy. High: 34 Low: 30<br />\u000ASat - Mostly Cloudy. High: 34 Low: 32<br />\u000A<br />\u000A<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Malmo__SE/*http://weather.yahoo.com/forecast/SWXX0020_f.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\u000A(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\u000A",
+	     "forecast": [
+		 { "code": "14",  "date": "20 Jan 2015",  "day": "Tue",  "high": "35",  "low": "31",  "text": "Snow Showers" },
+		 { "code": "26",  "date": "21 Jan 2015",  "day": "Wed",  "high": "36",  "low": "28",  "text": "Cloudy" },
+		 { "code": "28",  "date": "22 Jan 2015",  "day": "Thu",  "high": "34",  "low": "29",  "text": "Mostly Cloudy" },
+		 { "code": "30",  "date": "23 Jan 2015",  "day": "Fri",  "high": "34",  "low": "30",  "text": "Partly Cloudy" },
+		 { "code": "28",  "date": "24 Jan 2015",  "day": "Sat",  "high": "34",  "low": "32",  "text": "Mostly Cloudy" } ],
+	     "guid":  { "isPermaLink": "false",
+			"content": "SWXX0020_2015_01_24_7_00_CET" }
+	   }
+}
+
